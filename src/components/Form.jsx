@@ -17,7 +17,10 @@ const Form = ({ addItem }) => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <h4>Grocery</h4>
+      <h4>Things I Want To Eat</h4>
+      <p style={{ textAlign: 'center', marginBottom: '1rem' }}>
+        (in no particular order)
+      </p>
       <div className='form-control'>
         <input
           type='text'

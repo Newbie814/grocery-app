@@ -4,8 +4,19 @@ const SingleItem = ({ item, handleRemoveItem }) => {
   const [isChecked, setIsChecked] = useState(item.completed);
   return (
     <div className='single-item'>
-      <input type='checkbox' />
-      <p>{item.name}</p>
+      <input
+        type='checkbox'
+        checked={isChecked}
+        onChange={() => setIsChecked(!isChecked)}
+      />
+      <p
+        style={{
+          textTransform: 'capitalize',
+          textDecoration: isChecked && 'line-through',
+        }}
+      >
+        {item.name}
+      </p>
       <button
         type='button'
         className='btn remove-btn'

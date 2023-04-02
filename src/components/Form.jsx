@@ -15,6 +15,7 @@ const Form = ({ addItem }) => {
   const handleChange = (e) => {
     setNewItemName(e.target.value);
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <h4>Things I Want To Eat</h4>

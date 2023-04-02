@@ -1,6 +1,6 @@
 import SingleItem from './SingleItem';
 
-const ListItems = ({ items, handleRemoveItem }) => {
+const ListItems = ({ items, handleRemoveItem, handleEditItem }) => {
   return (
     <div className='items'>
       {items.map((item) => {
@@ -9,6 +9,7 @@ const ListItems = ({ items, handleRemoveItem }) => {
             key={item.id}
             item={item}
             handleRemoveItem={handleRemoveItem}
+            handleEditItem={handleEditItem}
           />
         );
       })}
